@@ -8,9 +8,25 @@ data:
     alertmanagerMain:
       nodeSelector:
         node-role.kubernetes.io/infra: ""
+      volumeClaimTemplate:
+        metadata:
+          name: alertmanager
+        spec:
+          storageClassName: gp2
+          resources:
+            requests:
+              storage: 40Gi
     prometheusK8s:
       nodeSelector:
         node-role.kubernetes.io/infra: ""
+      volumeClaimTemplate:
+        metadata:
+          name: prometheus
+        spec:
+          storageClassName: gp2
+          resources:
+            requests:
+              storage: 40Gi
     prometheusOperator:
       nodeSelector:
         node-role.kubernetes.io/infra: ""
