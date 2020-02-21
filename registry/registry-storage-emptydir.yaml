@@ -3,5 +3,6 @@ kind: Config
 metadata:
   name: cluster
 spec:
+  managementState: Managed
   storage:
     emptyDir: {}
