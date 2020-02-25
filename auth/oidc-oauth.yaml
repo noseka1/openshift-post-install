@@ -1,0 +1,23 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+  - name: oidc
+    mappingMethod: claim
+    type: OpenID
+    openID:
+      clientID: Client ID here
+      clientSecret:
+        name: oidc
+      ca:
+        name: oidc
+      claims:
+        preferredUsername:
+        - preferred_username
+        name:
+        - name
+        email:
+        - email
+      issuer: https://www.idp-issuer.com
