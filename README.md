@@ -10,4 +10,4 @@ If the resource doesn't exist in OpenShift, create the resource using:
 oc apply --filename htpasswd-secret.yaml
 ```
 
-Resources created using `oc apply` can be later updated using `oc apply`.
+Resources created using `oc apply` can be updated using `oc apply`.
