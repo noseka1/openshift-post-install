@@ -1,3 +1,5 @@
+# Place monitoring components on infra nodes.
+# Attach persistent storage.
 apiVersion: v1
 kind: ConfigMap
 metadata:
