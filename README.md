@@ -1,4 +1,4 @@
-# openshift-post-install
+# Collection of configuration settings to be applied after OpenShift installation
 
 Find out if a resource defined in the `<name>.yaml` manifest already exists in OpenShift:
 
