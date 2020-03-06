@@ -9,5 +9,3 @@ spec:
   source: redhat-operators
   sourceNamespace: openshift-marketplace
   name: elasticsearch-operator
-
-
