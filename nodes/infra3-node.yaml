@@ -1,0 +1,8 @@
+# Mark the node as infra node.
+apiVersion: v1
+kind: Node
+metadata:
+  labels:
+    node-role.kubernetes.io/worker: null
+    node-role.kubernetes.io/infra: ""
+  name: ip-10-0-158-89.us-west-2.compute.internal
