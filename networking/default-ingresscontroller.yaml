@@ -1,9 +1,13 @@
+# Replace the default ingress certificate.
+# Place the ingress pods on infra nodes.
 apiVersion: operator.openshift.io/v1
 kind: IngressController
 metadata:
   name: default
   namespace: openshift-ingress-operator
 spec:
+  defaultCertificate:
+    name: ingresscontroller-cert
   nodePlacement:
     nodeSelector:
       matchLabels:
