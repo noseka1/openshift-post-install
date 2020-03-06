@@ -9,7 +9,7 @@ If the resource doesn't exist in OpenShift, create the resource using:
 ```
 oc apply --filename htpasswd-secret.yaml
 ```
-If you create or modify a resource using `oc apply`, a `kubectl.kubernetes.io/last-applied-configuration` annotation will be attached to the resource. This annotation holds the last configuration applied to the resource. Following updates to the resource via `oc apply` will perform a three-way diff between the previously applied configuration, the provided input and the current configuration of the resource. This three-way diff provides you with better control over resource modifications than a simple diff performed by the `oc patch` command. Future changes to the resource should be based off the last applied input file, i.e. you modify the last applied input file to fit your needs and reapply it.
+If you create or modify a resource using `oc apply`, a `kubectl.kubernetes.io/last-applied-configuration` annotation will be attached to the resource. This annotation holds the last configuration applied to the resource. Following updates to the resource via `oc apply` will perform a three-way diff between the previously applied configuration, the provided input and the current configuration of the resource. This three-way diff provides you with a better control over resource modifications than a simple diff performed by the `oc patch` command. Future changes to the resource should be based off the last applied input file, i.e. you modify the last applied input file to fit your needs and reapply it.
 
 # Cluster Logging
 
