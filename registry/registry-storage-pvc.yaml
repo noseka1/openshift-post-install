@@ -1,9 +1,0 @@
-apiVersion: imageregistry.operator.openshift.io/v1
-kind: Config
-metadata:
-  name: cluster
-spec:
-  managementState: Managed
-  storage:
-    pvc:
-      claim: ocs4registry

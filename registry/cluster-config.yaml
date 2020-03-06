@@ -1,0 +1,15 @@
+# Create a route to allow accessing the image registry from outside of OpenShift.
+# Configure persistent storage for the image registry.
+# Place the image registry pods on infra nodes.
+apiVersion: imageregistry.operator.openshift.io/v1
+kind: Config
+metadata:
+  name: cluster
+spec:
+  defaultRoute: true
+  managementState: Managed
+  nodeSelector:
+    node-role.kubernetes.io/infra: ""
+  storage:
+    pvc:
+      claim: ocs4registry
