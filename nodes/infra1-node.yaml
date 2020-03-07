@@ -1,5 +1,5 @@
 # Mark the node as infra node by attaching the infra label to it.
-# Remove the default worker label from infra nodes.
+# Remove the default worker label from the infra node.
 apiVersion: v1
 kind: Node
 metadata:
