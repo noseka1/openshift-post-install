@@ -27,17 +27,3 @@ Resources that don't support strategic-mege patch can be patched this way:
 ```
 $ oc patch --filename <name>.yaml --patch "$(cat <name>.yaml)" --type merge
 ```
-
-# Cluster Logging
-
-The following commands will deploy cluster logging components on OpenShift. See also the [Logging documentation](https://docs.openshift.com/container-platform/latest/logging/cluster-logging.html).
-
-```
-$ oc apply --kustomize logging/elasticsearch-operator/base
-```
-```
-$ oc apply --kustomize logging/cluster-logging-operator/base
-```
-```
-$ oc apply --kustomize logging/cluster-logging-instance/base
-```
