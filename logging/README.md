@@ -5,9 +5,19 @@ The following commands will deploy cluster logging components on OpenShift. See 
 ```
 $ oc apply --kustomize elasticsearch-operator/base
 ```
+
 ```
 $ oc apply --kustomize cluster-logging-operator/base
 ```
+
+To deploy cluster logging development purposes, run this command:
+
 ```
-$ oc apply --kustomize cluster-logging-instance/base
+$ oc apply --kustomize cluster-logging-instance/overlays/development
+```
+
+To deploy cluster logging to production, run this command:
+
+```
+$ oc apply --kustomize cluster-logging-instance/overlays/production
 ```
