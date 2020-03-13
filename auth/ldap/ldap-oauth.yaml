@@ -23,4 +23,4 @@ spec:
       ca:
         name: ldap
       insecure: false
-      url: 'ldap://ldap.example.com/ou=users,dc=example,dc=com?uid'
+      url: 'ldaps://ldap.example.com/ou=users,dc=example,dc=com?uid'
