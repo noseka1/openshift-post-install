@@ -17,10 +17,10 @@ spec:
         - cn
         preferredUsername:
         - uid
-      bindDN: ''
+      bindDN: 'cn=openshift,ou=users,dc=example,dc=com'
       bindPassword:
         name: ldap
       ca:
         name: ldap
       insecure: false
-      url: 'ldap://ldap.example.com/ou=users,dc=acme,dc=com?uid'
+      url: 'ldap://ldap.example.com/ou=users,dc=example,dc=com?uid'
