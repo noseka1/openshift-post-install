@@ -3,7 +3,3 @@ kind: Kustomization
 
 resources:
 - elasticsearch-operator-subscription.yaml
-- openshift-operators-redhat-namespace.yaml
-- openshift-operators-redhat-operatorgroup.yaml
-- prometheus-k8s-role.yaml
-- prometheus-k8s-rolebinding.yaml
