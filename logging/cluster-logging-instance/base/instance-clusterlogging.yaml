@@ -15,7 +15,7 @@ spec:
         limits:
           memory: 2Gi
         requests:
-          cpu: 200m
+          cpu: 100m
           memory: 2Gi
       storage:
         storageClassName: gp2
@@ -45,7 +45,7 @@ spec:
         limits:
           memory: 200Mi
         requests:
-          cpu: 200m
+          cpu: 100m
           memory: 200Mi
       schedule: "*/10 * * * *"
   collection:
@@ -56,5 +56,5 @@ spec:
           limits:
             memory: 1Gi
           requests:
-            cpu: 200m
+            cpu: 100m
             memory: 1Gi
