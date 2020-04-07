@@ -2,6 +2,8 @@
 
 The following commands will deploy cluster logging components on OpenShift. See also the [Logging documentation](https://docs.openshift.com/container-platform/latest/logging/cluster-logging.html).
 
+## Deploy the standard EFK stack
+
 ```
 $ oc apply --kustomize elasticsearch-operator/base
 ```
@@ -20,4 +22,12 @@ To deploy cluster logging to production, run this command:
 
 ```
 $ oc apply --kustomize cluster-logging-instance/overlays/production
+```
+
+## Deploy Event Router
+
+Refer to [Working with Event Router](https://docs.openshift.com/container-platform/4.3/logging/cluster-logging-eventrouter.html) for more information.
+
+```
+$ oc process -f event-router/event-router-template.yml | oc apply --filename -
 ```
