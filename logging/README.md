@@ -29,5 +29,5 @@ $ oc apply --kustomize cluster-logging-instance/overlays/production
 Refer to [Working with Event Router](https://docs.openshift.com/container-platform/4.3/logging/cluster-logging-eventrouter.html) for more information.
 
 ```
-$ oc process -f event-router/event-router-template.yml | oc apply --filename -
+$ oc process -f event-router/event-router-template.yaml | oc apply --filename -
 ```
