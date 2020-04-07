@@ -17,7 +17,7 @@ spec:
           memory: 2Gi
       storage:
         storageClassName: gp2
-        size: 10G
+        size: 100G
       redundancyPolicy: ZeroRedundancy
   visualization:
     type: kibana
