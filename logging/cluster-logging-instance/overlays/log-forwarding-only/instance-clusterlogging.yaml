@@ -1,0 +1,20 @@
+apiVersion: logging.openshift.io/v1
+kind: ClusterLogging
+metadata:
+  annotations:
+    clusterlogging.openshift.io/logforwardingtechpreview: enabled
+  name: instance
+  namespace: openshift-logging
+spec:
+  logStore:
+    elasticsearch:
+      # no elasticsearch pods
+      nodeCount: 0
+  visualization:
+    kibana:
+      # no kibana pods
+      replicas: 0
+  curation:
+    curator:
+      # schedule the cron job to never run curator
+      schedule: "* * 31 2 *"
