@@ -24,6 +24,12 @@ To deploy cluster logging to production, run this command:
 $ oc apply --kustomize cluster-logging-instance/overlays/production
 ```
 
+To deploy cluster logging to only forward logs to the external fluentd/logstash:
+
+```
+$ oc apply --kustomize cluster-logging-instance/overlays/log-forwarding-only
+```
+
 ## Deploy Event Router
 
 Refer to [Working with Event Router](https://docs.openshift.com/container-platform/4.3/logging/cluster-logging-eventrouter.html) for more information.
