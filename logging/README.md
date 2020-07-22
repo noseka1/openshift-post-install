@@ -24,7 +24,7 @@ To deploy cluster logging to production, run this command:
 $ oc apply --kustomize cluster-logging-instance/overlays/production
 ```
 
-To deploy cluster logging to only forward logs to the external fluentd/logstash:
+To deploy cluster logging to only forward logs to an external fluentd/logstash:
 
 ```
 $ oc apply --kustomize cluster-logging-instance/overlays/log-forwarding-only
