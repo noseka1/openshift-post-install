@@ -7,6 +7,9 @@ metadata:
   namespace: openshift-monitoring
 data:
   config.yaml: |+
+    # Enable monitoring your own services
+    techPreviewUserWorkload:
+      enabled: true
     alertmanagerMain:
       nodeSelector:
         node-role.kubernetes.io/infra: ""
