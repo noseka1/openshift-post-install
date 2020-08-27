@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: prometheus-example-app
+
+resources:
+- prometheus-example-app-ns.yaml
+- prometheus-example-app-deploy.yaml
+- prometheus-example-app-svc.yaml
+- prometheus-example-monitor-servicemonitor.yaml
+- example-alert-prometheusrule.yaml
