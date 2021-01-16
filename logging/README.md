@@ -12,7 +12,7 @@ $ oc apply --kustomize elasticsearch-operator/base
 $ oc apply --kustomize cluster-logging-operator/base
 ```
 
-To deploy cluster logging development purposes, run this command:
+To deploy cluster logging for development purposes, run this command:
 
 ```
 $ oc apply --kustomize cluster-logging-instance/overlays/development
