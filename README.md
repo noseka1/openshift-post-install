@@ -16,7 +16,7 @@ If you create or modify a resource using `oc apply`, a `kubectl.kubernetes.io/la
 
 ## Using oc patch
 
-Existing resources can be modified using an `oc patch` command:
+Existing resources can be modified using an `oc patch` command (defaults to *strategic* patch type):
 
 ```
 $ oc patch --filename <name>.yaml --patch "$(cat <name>.yaml)"
