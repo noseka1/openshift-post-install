@@ -23,3 +23,5 @@ spec:
     tolerations:
     - effect: NoSchedule
       operator: Exists
+  # By default, there are 2 router replicas. If the cluster includes 3 infra nodes, scale the router replicas to 3.
+  replicas: 3
