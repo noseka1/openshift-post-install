@@ -1,14 +1,25 @@
-# Replace the default ingress certificate.
-# Place the ingress pods on infra nodes.
 apiVersion: operator.openshift.io/v1
 kind: IngressController
 metadata:
   name: default
   namespace: openshift-ingress-operator
 spec:
+  # Replace the default ingress certificate.
   defaultCertificate:
     name: ingresscontroller-cert
+  # Enable access logs. Send access logs to the stdout of a side-car container.
+  # The alternative is to send the logs to a remote location via syslog.
+  # See also:
+  # https://docs.openshift.com/container-platform/4.6/networking/ingress-operator.html#nw-configure-ingress-access-logging_configuring-ingress
+  logging:
+    access:
+      destination:
+        type: Container
+  # Place the router pods on infra nodes.
   nodePlacement:
     nodeSelector:
       matchLabels:
         node-role.kubernetes.io/infra: ""
+    tolerations:
+    - effect: NoSchedule
+      operator: Exists
