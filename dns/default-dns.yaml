@@ -1,0 +1,23 @@
+apiVersion: operator.openshift.io/v1
+kind: DNS
+metadata:
+  name: default
+spec:
+  # You can use DNS forwarding to override the forwarding configuration identified in etc/resolv.conf
+  # on a per-zone basis by specifying which name server should be used for a given zone.
+  servers:
+  - name: foo-server
+    zones:
+      - foo.com
+    forwardPlugin:
+      upstreams:
+        - 1.1.1.1
+        - 2.2.2.2:5353
+  - name: bar-server
+    zones:
+      - bar.com
+      - example.com
+    forwardPlugin:
+      upstreams:
+        - 3.3.3.3
+        - 4.4.4.4:5454
