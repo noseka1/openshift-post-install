@@ -1,0 +1,9 @@
+apiVersion: imageregistry.operator.openshift.io/v1
+kind: Config
+metadata:
+  name: cluster
+spec:
+  # Configure persistent storage for the image registry.
+  storage:
+    pvc:
+      claim: ocs4registry

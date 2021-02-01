@@ -12,7 +12,3 @@ spec:
     node-role.kubernetes.io/infra: ""
   # Number of desired image registry pods
   replicas: 1
-  # Configure persistent storage for the image registry.
-  storage:
-    pvc:
-      claim: ocs4registry
