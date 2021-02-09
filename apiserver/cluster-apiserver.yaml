@@ -1,4 +1,3 @@
-# Add API server certificate.
 apiVersion: config.openshift.io/v1
 kind: APIServer
 metadata:
@@ -11,6 +10,7 @@ spec:
     # See also: https://docs.openshift.com/container-platform/4.6/security/audit-log-policy-config.html
     profile: Default
   servingCerts:
+      # Add API server certificate
       namedCertificates:
         - names:
             - 'api.mycluster.example.com'
