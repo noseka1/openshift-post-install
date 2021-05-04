@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - instance-clusterlogging.yaml
+- instance-clusterlogforwarder.yaml
