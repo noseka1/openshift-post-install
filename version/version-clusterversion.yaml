@@ -1,6 +1,15 @@
 apiVersion: config.openshift.io/v1
 kind: ClusterVersion
 metadata:
+  annotations:
+    # Disable the validation against OpenAPI schema. Validation fails as we are applying
+    # only a partial object which doesn't include the required clusterID field.
+    # Validation can be tested manually:
+    # oc apply --validate=true -f version-clusterversion.yaml
+    # The resulting error message is:
+    # Error validating data: ValidationError(ClusterVersion.spec): missing required field
+    # "clusterID" in io.openshift.config.v1.ClusterVersion.spec
+    argocd.argoproj.io/sync-options: Validate=false
   name: version
 spec:
   channel: stable-4.9
