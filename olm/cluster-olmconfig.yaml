@@ -1,0 +1,9 @@
+apiVersion: operators.coreos.com/v1
+kind: OLMConfig
+metadata:
+  name: cluster
+spec:
+  # Disable copied CSVs for Operators installed with the AllNamespaces mode. Available since OpenShift 4.10
+  # See also: https://docs.openshift.com/container-platform/4.10/operators/admin/olm-config.html
+  features:
+    disableCopiedCSVs: true
